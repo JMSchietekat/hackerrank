@@ -56,9 +56,9 @@ int main(void)
 {
 	int n = 0;
 	int k = 0;
-	int *s;
 	scanf("%i %i", &n, &k);
-
+	
+	int *s;
 	s = initArr(n);
 
 	int bw_and = process(n, k, s, *bw_andFn);
