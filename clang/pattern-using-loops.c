@@ -3,24 +3,19 @@
 #include <math.h>
 #include <stdlib.h>
 
-void printGrid(int *arr, int size){
-	int i, j; 
-		for (i = 0; i < size; i++) 
-			for (j = 0; j < size; j++) 
-				printf("%d ", arr[i][j]);
-}
-
-int main() 
+int main()
 {
+	int n;
+	scanf("%d", &n);
 
-    int n;
-    scanf("%d", &n);
+	for (int i = -(n - 1); i < n; i++)
+	{
+		for (int j = -(n - 1); j < n; j++)
+		{
+			printf("%d ", abs(i) > abs(j) ? (abs(i) + 1) : (abs(j) + 1));
+		}
+		printf("\n");
+	}
 
-	const int size = 2*n-1;
-
-	int grid[size][size] = {0};
-  	
-	printGrid(grid, size);
-
-    return 0;
+	return 0;
 }
