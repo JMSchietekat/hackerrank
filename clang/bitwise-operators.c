@@ -3,11 +3,11 @@
 #include <math.h>
 #include <stdlib.h>
 
-#define MAX_ARR_LENGHT 10000
+#define MAX_ARR_LENGTH 10000
 
 int *initArr(int n)
 {
-	static int arr[MAX_ARR_LENGHT];
+	static int arr[MAX_ARR_LENGTH];
 
 	for (int i = 0; i < n; i++)
 	{
