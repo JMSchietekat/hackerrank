@@ -40,7 +40,7 @@ def mode(elem=[]):
                 mode = e
             continue
 
-        cnt = 1
+        local_occurance = 1
 
     return round(mode, 1)
 
