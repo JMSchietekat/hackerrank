@@ -5,20 +5,17 @@ def mean(elem=[]):
     for i in elem:
         mean += i
 
-    return round(mean / len(elem), 1)
+    return mean / len(elem)
 
 
 def median(elem=[]):
     elem.sort()
-    median = 0
     elem_cnt = len(elem)
 
     if(elem_cnt % 2 == 0):
-        median = (elem[int(elem_cnt/2) - 1] + elem[int(elem_cnt/2)])/2
+        return (elem[int(elem_cnt/2) - 1] + elem[int(elem_cnt/2)])/2
     else:
-        median = elem[int(elem_cnt/2)]
-
-    return round(median, 1)
+        return elem[int(elem_cnt/2)]
 
 
 def mode(elem=[]):
@@ -42,7 +39,8 @@ def mode(elem=[]):
 
         local_occurance = 1
 
-    return round(mode, 1)
+    return mode
+
 
 if __name__ == "__main__":
 
@@ -50,6 +48,6 @@ if __name__ == "__main__":
 
     elem = list(map(int, input().rstrip().split()))
 
-    print(mean(elem))
-    print(median(elem))
-    print(mode(elem))
+    print(round(mean(elem), 1))
+    print(round(median(elem), 1))
+    print(round(mode(elem), 1))
