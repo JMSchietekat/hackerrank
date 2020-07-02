@@ -1,12 +1,12 @@
 
-def median(elem=[]):
-    elem.sort()
-    elem_cnt = len(elem)
+def median(x=[]):
+    x.sort()
+    x_cnt = len(x)
 
-    if(elem_cnt % 2 == 0):
-        return (elem[int(elem_cnt/2) - 1] + elem[int(elem_cnt/2)])/2
+    if(x_cnt % 2 == 0):
+        return (x[int(x_cnt/2) - 1] + x[int(x_cnt/2)])/2
     else:
-        return elem[int(elem_cnt/2)]
+        return x[int(x_cnt/2)]
 
 def quartiles(x=[]):
     x.sort()
