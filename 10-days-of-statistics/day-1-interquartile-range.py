@@ -1,10 +1,4 @@
-def interquartileRange(x, f):
-    s = []
-
-    for i, v in enumerate(x):
-        for _ in range(f[i]):
-            s.append(v)
-
+def IQR(x):
     q = quartiles(s)
 
     return (q[2] - q[0])
@@ -35,6 +29,14 @@ def quartiles(x=[]):
 
     return q1, q2, q3
 
+def flattenSet(x, f):
+    s = []
+
+    for i, v in enumerate(x):
+        for _ in range(f[i]):
+            s.append(v)
+
+    return s
 
 if __name__ == "__main__":
 
@@ -43,4 +45,6 @@ if __name__ == "__main__":
     x = list(map(int, input().rstrip().split()))
     f = list(map(int, input().rstrip().split()))
 
-    print(round(interquartileRange(x, f) * 1.0, 1))
+    s = flattenSet(x,f)
+
+    print(round(IQR(s) * 1.0, 1))
