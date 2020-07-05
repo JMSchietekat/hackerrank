@@ -15,13 +15,20 @@ def binomialProbability(x, n, p):
     return combination(n, x) * pow(p, x) * pow((1-p), (n-x))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":    
 
-    b, g = map(float, input().split())
+    defectivePercentage, batchSize = map(int, input().split())
 
     binomialDist = 0
 
-    for i in range(3, 7):
-        binomialDist += binomialProbability(i, 6, b / (b+g))
+    for i in range(0, 3):
+        binomialDist += binomialProbability(i, batchSize, defectivePercentage / 100)
+
+    print('{:.3f}'.format(binomialDist))
+
+    binomialDist = 0
+
+    for i in range(2, batchSize+1):
+        binomialDist += binomialProbability(i, batchSize, defectivePercentage / 100)
 
     print('{:.3f}'.format(binomialDist))
