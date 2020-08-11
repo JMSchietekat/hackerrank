@@ -4,11 +4,12 @@ import random
 import re
 import sys
 
+
 def pickingNumbers(a):
     a.sort()
     max = 0
 
-    for i, e in enumerate(a):
+    for i, _ in enumerate(a):
         if(i == len(a)):
             continue
 
@@ -19,10 +20,11 @@ def pickingNumbers(a):
                 local_max += 1
                 if local_max > max:
                     max = local_max
-            else: 
+            else:
                 break
 
     return max
+
 
 if __name__ == '__main__':
     n = int(input().strip())

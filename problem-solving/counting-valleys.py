@@ -4,7 +4,7 @@ import random
 import re
 import sys
 
-# Complete the countingValleys function below.
+
 def countingValleys(n, s):
     valleys = 0
     alt = 0

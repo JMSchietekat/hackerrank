@@ -4,6 +4,7 @@ import random
 import re
 import sys
 
+
 def miniMaxSum(arr):
     min = 10e9
     max = 1
@@ -17,6 +18,7 @@ def miniMaxSum(arr):
         sum += e
 
     return (sum-max), (sum-min)
+
 
 if __name__ == '__main__':
     arr = list(map(int, input().rstrip().split()))

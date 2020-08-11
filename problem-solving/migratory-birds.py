@@ -5,7 +5,7 @@ import random
 import re
 import sys
 
-# Complete the migratoryBirds function below.
+
 def migratoryBirds(arr):
     arr.sort(reverse=True)
     # print(arr)
@@ -20,16 +20,17 @@ def migratoryBirds(arr):
 
         elif arr[i-1] == e:
             local_cnt += 1
-            if local_cnt == max_cnt:                
-                mostcommonId = e                 
+            if local_cnt == max_cnt:
+                mostcommonId = e
             elif local_cnt > max_cnt:
                 max_cnt += 1
-                mostcommonId = e 
+                mostcommonId = e
 
         else:
             local_cnt = 0
 
     return mostcommonId
+
 
 if __name__ == '__main__':
 
@@ -37,4 +38,4 @@ if __name__ == '__main__':
 
     arr = list(map(int, input().rstrip().split()))
 
-    print(migratoryBirds(arr))  
+    print(migratoryBirds(arr))

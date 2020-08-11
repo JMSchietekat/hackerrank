@@ -2,6 +2,7 @@
 import os
 import sys
 
+
 def simpleArraySum(ar):
     sum = 0
 
@@ -10,6 +11,7 @@ def simpleArraySum(ar):
 
     return sum
 
+
 if __name__ == '__main__':
 
     ar_count = int(input())
@@ -17,4 +19,3 @@ if __name__ == '__main__':
     ar = list(map(int, input().rstrip().split()))
 
     print(simpleArraySum(ar))
-

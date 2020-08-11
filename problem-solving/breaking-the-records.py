@@ -5,11 +5,12 @@ import random
 import re
 import sys
 
+
 def breakingRecords(scores):
     high = scores[0]
     low = scores[0]
 
-    count_h_l = [0,0]
+    count_h_l = [0, 0]
 
     for s in scores:
         if s > high:

@@ -4,7 +4,6 @@ import random
 import re
 import sys
 
-# Complete the sockMerchant function below.
 def sockMerchant(n, ar):
     ar.sort()
     pairs = 0

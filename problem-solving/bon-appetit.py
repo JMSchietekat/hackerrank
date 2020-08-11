@@ -4,7 +4,7 @@ import random
 import re
 import sys
 
-# Complete the bonAppetit function below.
+
 def bonAppetit(bill, k, b):
     b_charged = 0
     b_actual = 0
@@ -13,9 +13,8 @@ def bonAppetit(bill, k, b):
         b_charged += e
 
     b_actual = (b_charged - bill[k]) / 2
-    
-    return 'Bon Appetit' if b == b_actual else int(b - b_actual)
 
+    return 'Bon Appetit' if b == b_actual else int(b - b_actual)
 
 
 if __name__ == '__main__':

@@ -4,6 +4,7 @@ import random
 import re
 import sys
 
+
 def birthdayCakeCandles(ar):
 
     max = 0
@@ -21,7 +22,7 @@ def birthdayCakeCandles(ar):
 
 if __name__ == '__main__':
     ar_count = int(input())
-    
+
     arr = list(map(int, input().rstrip().split()))
 
     print(birthdayCakeCandles(arr))
